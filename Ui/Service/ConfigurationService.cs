@@ -60,6 +60,7 @@ namespace _1RM.Service
         public bool ShowNoteFieldInListView = true;
 
         public int LogLevel = (int)SimpleLogHelper.EnumLogLevel.Warning;
+        public string SqliteEncKey = "";
         #endregion
 
         // Misc

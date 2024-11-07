@@ -40,7 +40,7 @@ namespace _1RM.Service.DataSource.DAO.Dapper
 
         public string GetJson()
         {
-            return Json;
+            return EncDec.Instance.Decrypt(Json);
         }
     }
 
@@ -52,7 +52,7 @@ namespace _1RM.Service.DataSource.DAO.Dapper
             {
                 Id = s.Id,
                 ClassVersion = s.ClassVersion,
-                Json = s.ToJsonString(),
+                Json = EncDec.Instance.Encrypt(s.ToJsonString()),
                 Protocol = s.Protocol,
             };
             return ret;
